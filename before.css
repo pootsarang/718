@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    background-color: aqua;
+}
+
+.box{
+    background-color: red;
+}
+
+.box::before{
+    content: "💛";
+    display: block;
+}
+
+.box::after{
+    content: "💥";
+    display: block;
+}
+
+.box2::before{
+    content: "<before>";
+    color: red;
+}

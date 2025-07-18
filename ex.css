@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 버튼에 아이콘 넣기 */
+.btn-download::before{
+    content: "▶";
+    margin-right: 10px;
+}
+.btn-download{
+    padding: 10px 20px;
+    background-color: antiquewhite;
+    color: blue;
+    border: none;
+    border-radius: 5px;
+}
+.btn-download::after{
+    content: "🧡";
+    margin-left: 10px;
+}
+
+/* 말풍선 꼬리 만들기 */
+.tooltip{
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+    width: 200px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.tooltip::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 76px;
+    border: 5px solid transparent;
+    border-top-color: #333;
+}
+
+/* 구분선 텍스트 */
+.divider{
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.divider::before, .divider::after{
+    content: "";
+    width: 10%;
+    height: 1px;
+    background-color: #ccc;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.divider::before{
+    margin-right: 10px;
+}
+
+.divider::after{
+    margin-left: 10px;
+}
+
+.menu{
+    background-color: skyblue;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a{
+    color: #333;
+    text-decoration: none;
+    padding: 0px 10px;
+    position: relative;
+}
+
+.menu a::after{
+    content: "";
+    width: 1px;
+    height: 16px;
+    background-color: #333;
+    display: inline-block;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu a:last-child::after{
+    content: none;
+}
